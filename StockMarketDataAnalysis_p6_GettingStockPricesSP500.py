@@ -5,7 +5,10 @@ import datetime as dt
 import os
 import pandas as pd
 import pandas_datareader.data as web
-import numpy
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import sklearn
 
 def save_sp500_tickers():
   resp = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
@@ -49,12 +52,16 @@ def get_data_from_yahoo(reload_sp500 = False):
 # Grab all ticker data
 
   for ticker in tickers:
-    print(ticker)
-    if not os.path.exists('stock_dfs/{}.csv'.format(ticker)):
-      df = web.DataReader(ticker, 'yahoo', start, end)
-      df.to_csv('stock_dfs/{}.csv'.format(ticker))
-    else:
-      print('Already have {}'.format(ticker))
+    try:
+      print(ticker)
+    except KeyError:
+      pass
+    
+      if not os.path.exists('stock_dfs/{}.csv'.format(ticker)):
+        df = web.DataReader(ticker, 'yahoo', start, end)
+        df.to_csv('stock_dfs/{}.csv'.format(ticker))
+      else:
+        print('Already have {}'.format(ticker))
 
 #for in in range(0,len(tickers)):
 #  try:
