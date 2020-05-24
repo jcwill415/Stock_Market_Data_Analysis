@@ -8,7 +8,6 @@ import pandas_datareader.data as web
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-import sklearn
 
 def save_sp500_tickers():
   resp = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
@@ -76,32 +75,46 @@ def compile_data():
 
 # Begin dataframe
 
-  main_df = pd.DataFrame()
+#  main_df = pd.DataFrame()
 
+  mainDataSet = pd.DataFrame()
 # Count in SP500 tickers list
   for count, ticker in enumerate(tickers):
-    try:
-      df = pd.read_csv('stock_dfs/{}.csv'.format(ticker.replace('.','-')))
-      df.set_index('Date', inplace = True)
+    fileDataSet = pd.read_csv('stock_dfs/{}.csv'.format(ticker))
+    fileDataSet.set_index('Date', inplace = True)
 
-      df.rename(columns = {'Adj Close': ticker}, inplace = True)
-      df.drop(['Open', 'High', 'Low', 'Close', 'Volume'], 1, inplace = True)
+    fileDataSet.rename(columns = {'Adj Close':ticker}, inplace = True)
+    fileDataSet.drop(['Open', 'High', 'Low', 'Close', 'Volume'], 1, inplace = True)
+
+    if mainDataSet.empty:
+      mainDataSet = fileDataSet
+    else:
+      mainDataSet = mainDataSet.join(fileDataSet)
+    print(mainDataSet.head())
+  mainDataSet.to_csv('sp500_joined_closes.csv')
+compile_data()  
+#    try:
+#     df = pd.read_csv('stock_dfs/{}.csv'.format(ticker.replace('.','-')))
+#    df.set_index('Date', inplace = True)
+
+#      df.rename(columns = {'Adj Close': ticker}, inplace = True)
+#      df.drop(['Open', 'High', 'Low', 'Close', 'Volume'], 1, inplace = True)
 # Joining dataframes together
-      if main_df.empty:
-        main_df = df
-      else:
+#      if main_df.empty:
+#        main_df = df
+#      else:
 #        main_df = main_df.join(df, how = 'outer')
-        main_df.join(df, how = 'outer')
-    except:
-        print('stock_dfs/{}.csv'.format(ticker) + 'not found')
+#        main_df.join(df, how = 'outer')
+#    except:
+#        print('stock_dfs/{}.csv'.format(ticker) + 'not found')
         
 # Print intervals of 10
-    if count % 10 == 0:
-      print(count)
+#    if count % 10 == 0:
+#      print(count)
 
-  print(main_df.head())
-  main_df.to_csv('sp500_joined_closes.csv')
-compile_data()
+#  print(main_df.head())
+#  main_df.to_csv('sp500_joined_closes.csv')
+#compile_data()
 
       
 
