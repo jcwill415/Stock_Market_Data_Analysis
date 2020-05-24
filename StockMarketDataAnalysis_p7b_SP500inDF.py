@@ -8,7 +8,6 @@ import pandas_datareader.data as web
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-import sklearn
 
 def save_sp500_tickers():
   resp = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
@@ -30,7 +29,6 @@ def save_sp500_tickers():
   
 
 # Get data from Yahoo and call SP500 tickers list as sp500
-
 def get_data_from_yahoo(reload_sp500 = False):
   if reload_sp500:
     tickers = save_sp500_tickers()
@@ -41,8 +39,7 @@ def get_data_from_yahoo(reload_sp500 = False):
   
 # Take all of the data for stocks and store in a directory
 # Working with API, parsing website, take entire dataset and store locally
-# Here we will look at Adjusted Close, but we can look at other columns later
-
+# Looking at Adjusted Close
   if not os.path.exists('stock_dfs'):
     os.makedirs('stock_dfs')
 
@@ -50,7 +47,6 @@ def get_data_from_yahoo(reload_sp500 = False):
   end = dt.datetime(2020,5,23)
 
 # Grab all ticker data
-
   for ticker in tickers:
 #    try:
       print(ticker)
@@ -62,37 +58,36 @@ def get_data_from_yahoo(reload_sp500 = False):
           df = web.DataReader(ticker.replace('.','-'), 'yahoo', start, end)
           df.to_csv(f'stock_dfs/{ticker}.csv')
         except:
-          print(f'Problems found when retrieving data for{ticker}. Skipping!')
+          print(f'Problem retrieving data for{ticker}. Skip!')
 #          df.to_csv('stock_dfs/{}.csv'.format(ticker))
         else:
           print('Already have {}'.format(ticker))
-
 
 #get_data_from_yahoo()
 
 def compile_data():
   with open("sp500tickers.pickle", "rb") as f:
+#  favorite_color = pickle.load( open)("save.p", "rb" )):
+
     tickers = pickle.load(f)
 
 # Begin dataframe
-
   main_df = pd.DataFrame()
 
 # Count in SP500 tickers list
-  for count, ticker in enumerate(tickers):
+  for count, ticker in enumerate(tickers[:506]):
 #    try:
     df = pd.read_csv('stock_dfs/{}.csv'.format(ticker))
     df.set_index('Date', inplace = True)
 
     df.rename(columns = {'Adj Close':ticker}, inplace = True)
-    df.drop(['Open', 'High', 'Low', 'Close', 'Volume'], 1, inplace = True)
+    df.drop(['High', 'Low', 'Open', 'Close', 'Volume'], 1, inplace = True)
 
 # Joining dataframes together
-
     if main_df.empty:
       main_df = df
     else:
-        main_df = main_df.join(df, how = 'outer')
+      main_df = main_df.join(df, how = 'outer')
 #      main_df.join(df, how = 'outer')
 #    except:
 #      print('stock_dfs/{}.csv'.format(ticker) + 'not found')
@@ -104,9 +99,3 @@ def compile_data():
   print(main_df.head())
   main_df.to_csv('sp500_joined_closes.csv')
 compile_data()
-
-      
-
-
-
-
