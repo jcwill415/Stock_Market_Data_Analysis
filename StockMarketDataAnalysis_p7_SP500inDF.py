@@ -76,8 +76,8 @@ def compile_data():
 # Begin dataframe
 
 #  main_df = pd.DataFrame()
-
   mainDataSet = pd.DataFrame()
+
 # Count in SP500 tickers list
   for count, ticker in enumerate(tickers):
     fileDataSet = pd.read_csv('stock_dfs/{}.csv'.format(ticker))
