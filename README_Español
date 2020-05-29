@@ -1,0 +1,60 @@
+# ANÁLISIS DE DATOS DEL MERCADO 
+### Utilizar Python para obtener datos y unir con datos  financieros de Yahoo (u otra API de finanzas). Hacer un análisis y manipulación de datos via visualización 
+financiera e inversiónes (es decir, comparar las tasas de rendimiento, calcular el riesgo, crear algoritmos comerciales y de toma de decisiones).
+
+## Resumen del proyecto
+#### Primero, este proyecto comenzará con un análisis técnico, midiendo los datos del precio de las acciones para el movimiento (volatilidad) y su volumen.
+#### Segundo, planeo incluir una sucursal con análisis fundamental, para profundizar en el análisis de estados financieros.
+#### Tercero, estamos interesados en ampliar el análisis para incluir Python en criptomonedas, para el análisis financiero y de inversión para las ICOs, y predecir los precios de las criptomonedas.
+##### <b> DESCARGO DE RESPONSABILIDAD: </b> No soy asesor financiero (a) ni contador(a) público(a) certificado(a). Este proyecto es solo para fines educativos. Las inversiones de cualquier tipo implica riesgos. Aunque es posible minimizar el riesgo, sus inversiones son de su exclusiva responsabilidad. Es muy importante realizar su propia investigación. Simplemente estoy compartiendo mi proyecto / opinión sin ninguna garantía de ganancias o pérdidas en alguna inversión.
+
+## Resumen técnico
+#### Idioma de fondo: Python
+#### Conjunto de datos: csv
+#### Paquetes: Pandas / NumPy, Matplotlib para la manipulación y visualización de datos.
+
+## Caracteristicas
+#### El programa obtendrá datos de los tickers S&P500, extraerá datos financieros usando un API y los descargará en un archivo csv.
+##### - Obtenga los tickers por la red (por ejemplo, Wikipedia)
+##### - Para este proyecto, la lista S&P500 se encuentra como: "La lista de compañías S&P 500" se encuentra en https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+##### - Use Solicitudes ("Requests") para obtener datos usando el paquete de Python llamdo "Beautiful Soup" ##### - Usando este objeto, navegue / busque tablas de HTML para los datos que desea extraer.
+#### Crear un directorio con datos de cierre de precios de acciones para las 500 compañías a lo largo del tiempo (es decir, del 01/01/2000 al 24/05/2020).
+#### Crear modelos cuantitativos para realizar análisis financieros y de inversión, como el riesgo y las tasas de rendimiento, y crear una estrategia comercial básica.
+
+## Hitos
+#### Importar paquetes necesarios
+##### <b> Paquetes necesarios para este proyecto: </b>
+###### pandas
+###### pandas-datareader
+###### beautifulsoup4
+###### scikit-learn
+###### * Dependencias y módulos que necesitaria: NumPy, Matplotlib, mplfinance, yahoo (u otra API de finanzas)
+
+## Requisitos
+#### Cree un raspador de web para obtener datos para la lista S&P500 </b>
+#### Use Yahoo Finance (u otro) API para datos financieros
+#### Use Pandas para unir tickers de acciones con datos financieros
+#### Analice datos con varios modelos cuantitativos para calcular el riesgo y tomar decisiones de inversión.
+##### - Descargar datos como csv y leer.
+##### - Cree modelos cuantitativos para predecir los rendimientos y evaluar el riesgo.
+##### - Ejecutar cálculos básicos de valor en riesgo (VaR), simulaciones de Monte Carlo
+##### - Analice las noticias para ubicar indicadores de volatilidad de mercado.
+##### - Grafique / visualizar datos.
+
+##### <b> NOTA: </b> Si es nuevo en Python, consulte el sitio web de Fundamentos de programación de Python ("Python Programming Fundamentals") para obtener tutoriales. Haz clic aqui: https://pythonprogramming.net/introduction-learn-python-3-tutorials/using. 
+
+Para empezar este proyecto, necesitará aprender como instalar paquetes y módulos de Python usando pip install.
+
+## <b> INSTRUCCIONES: </b>
+#### <b> Paso 1: </b> Introducción al uso de Python para finanzas
+#### <b> Paso 2: </b> Manejo y representación gráfica de datos
+#### <b> Paso 3: </b> Manipulación de datos de mercado (stock)
+#### <b> Paso 4: </b> Automatización de lista S&P500
+#### <b> Paso 5: </b> Datos informativos de precios de acciones de compañías  S&P500
+#### <b> Paso 6: </b> Combine los símbolos de mercado (tickers) con los precios de acciones
+#### <b> Paso 7: </b> Cree una tabla de correlación S&P500
+### Python para Lenguaje de Máquina (Machine Learning)
+#### <b> Paso 8: </b> ML: Hacer un Preproceso de datos de mercado
+#### <b> Paso 9: </b> ML: Crear una función de/con destino como comprar, vender, retener (buy, sell, hold)
+#### <b> Paso 10: </b> ML: Crear etiquetas
+#### <b> Paso 11: </b> Algoritmo de/para Lenguaje de Máquina para vincular las relaciones: cambios actuales y futuros en el precio de las acciones
