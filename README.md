@@ -55,4 +55,4 @@
 #### <b>Step 8:</b> ML: Preprocess Stock Market Data
 #### <b>Step 9:</b> ML: Create Target Function (Buy, Sell, Hold) 
 #### <b>Step 10:</b> ML: Create Labels
-#### <b>Step 11:</b> ML Algorithm for Mapping Relationships: Current & Future Stock Price Changes
+#### <b>Step 11:</b> ML Algorithm for Mapping Relationships: Stock Price Changes
