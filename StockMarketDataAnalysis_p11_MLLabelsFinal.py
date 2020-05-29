@@ -187,7 +187,6 @@ def extract_featuresets(ticker):
 
 # Normalizing data set for ticker (prices) by using percent change.
     fileDataSet_vals = fileDataSet[[ticker_name for ticker_name in tickers]].pct_change()
-
     fileDataSet_vals = fileDataSet_vals.replace([np.inf, -np.inf], 0)
     fileDataSet_vals.fillna(0, inplace = True)
 

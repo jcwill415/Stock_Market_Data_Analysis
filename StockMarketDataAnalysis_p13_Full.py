@@ -56,7 +56,7 @@ ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
 ax1.plot(df.index, df['Adj Close'])
 ax1.plot(df.index, df['100ma'])
 ax2.bar(df.index, df['Volume'])
-plt.show()
+# plt.show()
 
 df_ohlc = df['Adj Close'].resample('10D').ohlc()
 df_volume = df['Volume'].resample('10D').sum()
@@ -73,41 +73,23 @@ ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
 
 candlestick_ohlc(ax1, df_ohlc.values, width = 2, colorup = 'g')
 ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
-plt.show()
+# plt.show()
 
+# Part 4: Resampling
 df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 0)
-df['100ma'] = df['Adj Close'].rolling(window = 100).mean()
 df['100ma'] = df['Adj Close'].rolling(window = 100, min_periods = 0).mean()
 print(df.tail(10))
 
-ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
-ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
-
-ax1.plot(df.index, df['Adj Close'])
-ax1.plot(df.index, df['100ma'])
-
-ax2.bar(df.index, df['Volume'])
-plt.show()
-
-# Part 4: Resampling
-
-#df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 0)
-#df['100ma'] = df['Adj Close'].rolling(window = 100, min_periods = 0).mean()
-#print(df.tail(10))
-
-#df_ohlc = df['Adj Close'].resample('10D').mean()
+df_ohlc = df['Adj Close'].resample('10D').mean()
 
 # Resample data for 10 day period
 df_ohlc = df['Adj Close'].resample('10D').ohlc()
 df_volume = df['Volume'].resample('10D').sum()
-
 df_ohlc.reset_index(inplace = True)
-
 
 # Convert datetime object to mdate
 df_ohlc['Date'] = df_ohlc['Date'].map(mdates.date2num)
 print(df_ohlc.head())
-
 
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
 ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
@@ -116,11 +98,11 @@ ax1.xaxis_date()
 candlestick_ohlc(ax1, df_ohlc.values, width = 3, colorup = 'g')
 ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
                  
-#ax1.plot(df.index, df['Adj Close'])
-#ax1.plot(df.index, df['100ma'])
-#ax2.bar(df.index, df['Volume'])
+ax1.plot(df.index, df['Adj Close'])
+ax1.plot(df.index, df['100ma'])
+ax2.bar(df.index, df['Volume'])
 
-plt.show()
+# plt.show()
 
 # Part 5: Getting S&P500 List
 def save_sp500_tickers():
@@ -143,7 +125,6 @@ save_sp500_tickers()
   
 # Part 6: Getting Stock Prices
 # Get data from Yahoo and call SP500 tickers list as sp500
-
 def get_data_from_yahoo(reload_sp500 = False):
   if reload_sp500:
     tickers = save_sp500_tickers()
@@ -154,37 +135,23 @@ def get_data_from_yahoo(reload_sp500 = False):
 # Take all of the data for stocks and store in a directory
 # Working with API, parsing website, take entire dataset and store locally
 # Here we will look at Adjusted Close, but we can look at other columns later
-
   if not os.path.exists('stock_dfs'):
     os.makedirs('stock_dfs')
 
   start = dt.datetime(2000,1,1)
-  end = dt.datetime(2020,5,23)
+  end = dt.datetime(2020,5,22)
 
 # Grab all ticker data
-
   for ticker in tickers:
-#    try:
-      print(ticker)
-#    except KeyError:
-#      pass
-    
+      print(ticker)    
       if not os.path.exists('stock_dfs/{}.csv'.format(ticker)):
         try:
           df = web.DataReader(ticker, 'yahoo', start, end)
           df.to_csv('stock_dfs/{}.csv'.format(ticker))
         except:
           print(f'Problems retrieving data for{ticker}. Skipping!')
-#           df.to_csv('stock_dfs/{}.csv'.format(ticker))
         else:
           print('Already have {}'.format(ticker))
-
-#for in in range(0,len(tickers)):
-#  try:
-#    x = data.DataReader(tickers[i], 'yahoo', start_date, end_date)
-#    x.to_excel(tickers[i] + '.xlsx')
-#    except KeyError:
-#      pass
 
 get_data_from_yahoo()
 
@@ -192,17 +159,12 @@ get_data_from_yahoo()
 def compile_data():
   with open("sp500tickers.pickle", "rb") as f:
     tickers = pickle.load(f)
-
-# Begin dataframe
-
-#  main_df = pd.DataFrame()
   mainDataSet = pd.DataFrame()
 
 # Count in SP500 tickers list
   for count, ticker in enumerate(tickers):
     fileDataSet = pd.read_csv('stock_dfs/{}.csv'.format(ticker))
     fileDataSet.set_index('Date', inplace = True)
-
     fileDataSet.rename(columns = {'Adj Close':ticker}, inplace = True)
     fileDataSet.drop(['Open', 'High', 'Low', 'Close', 'Volume'], 1, inplace = True)
 
@@ -212,30 +174,7 @@ def compile_data():
       mainDataSet = mainDataSet.join(fileDataSet)
     print(mainDataSet.head())
   mainDataSet.to_csv('sp500_joined_closes.csv')
-compile_data()  
-#    try:
-#     df = pd.read_csv('stock_dfs/{}.csv'.format(ticker.replace('.','-')))
-#    df.set_index('Date', inplace = True)
-
-#      df.rename(columns = {'Adj Close': ticker}, inplace = True)
-#      df.drop(['Open', 'High', 'Low', 'Close', 'Volume'], 1, inplace = True)
-# Joining dataframes together
-#      if main_df.empty:
-#        main_df = df
-#      else:
-#        main_df = main_df.join(df, how = 'outer')
-#        main_df.join(df, how = 'outer')
-#    except:
-#        print('stock_dfs/{}.csv'.format(ticker) + 'not found')
-        
-# Print intervals of 10
-#    if count % 10 == 0:
-#      print(count)
-
-#  print(main_df.head())
-#  main_df.to_csv('sp500_joined_closes.csv')
-#compile_data()
-
+#compile_data()  
 
 # Part 8: Correlation Tables & Data Visualization
 # Visualizing data from the SP500 close price csv 
@@ -243,8 +182,8 @@ def visualize_data():
   df = pd.read_csv('sp500_joined_closes.csv')
 
 # Example of plotting one company close price over time for Apple (ticker = AAPL) 
-##  df['AAPL'].plot()
-##  plt.show()
+#  df['AAPL'].plot()
+#  plt.show()
 
 # Create correlation table for all data in df for SP500 close price
   df_corr = df.corr()
@@ -276,15 +215,14 @@ def visualize_data():
   plt.xticks(rotation = 90)
   heatmap.set_clim(-1, 1)
   plt.tight_layout()
-  plt.show()
+#  plt.show()
   
 visualize_data()
 
 # Next create features/labels, use ML for trading strategy & possible investments.	
 
 # Part 9: Preprocessing Data for Machine Learning (ML) Model
-
-
+# Part 10: Setting Target
 
 # svm = support-vector machine
 # Cross validation to shuffle data and create training & testing samples  
@@ -332,8 +270,8 @@ def process_data_for_labels(ticker):
     fileDataSet.fillna(0, inplace = True)
     return tickers, fileDataSet
 
-# Here we look at 3M company (ticker = TSLA)
-process_data_for_labels('TSLA')
+# Here we look at " " company (ticker = " ")
+process_data_for_labels('BAC')
 
 # Next, generate labels for targets using machine learning for investing with Python
 # Based on percent change pricing information, should we buy, sell, or hold company?
@@ -350,23 +288,20 @@ process_data_for_labels('TSLA')
 # Example if you are incorrect on the hold, did not think it would change more than 2%, but it did...
 
 def buy_sell_hold(*args):
-
     cols = [c for c in args]
     requirement = 0.02
     for col in cols:
-##        if col > 0.025:
         if col > requirement:
             return 1
-##        if col < -0.025:
         if col < -requirement:
             return -1
     return 0
 
+# Part 11 ML Labels
 # Map the function above to a column
 def extract_featuresets(ticker):
     tickers, fileDataSet = process_data_for_labels(ticker)
-##  tickers, df = process_data_for_lables(ticker
-    
+
 # Define new column, value = mapped function using arg
 # Arg = 7-day & change for future price; Pass paramters to function
 # Generate labels for buy, sell, or hold
@@ -391,40 +326,39 @@ def extract_featuresets(ticker):
 
     return X, y, fileDataSet
 
-extract_featuresets('TSLA')
+extract_featuresets('BAC')
 
 # Create new Machine Learning function
 # Create training and testing, 25% sample data will be tested against for accuracy
-##def do_ml(ticker):
-##    X, y, fileDataSet = extract_featuresets(ticker)
-##    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25)
-##    
+
 # Create classifier, define
 # X_train is (fileDataset_vals, above) the percent change data for all companies, including company testing for
 # y is the target classification (0 = hold, 1 = buy, -1 = sell)
 # Use classifier that will fit input data to target 
-##    clf = neighbors.KNeighborsClassifier()
-##
-##    clf.fit(X_train, y_train)
-##    confidence = clf.score(X_test, y_test)
-##    print('Accuracy', confidence)
+# clf = neighbors.KNeighborsClassifier()
+#
+#    clf.fit(X_train, y_train)
+#    confidence = clf.score(X_test, y_test)
+#    print('Accuracy', confidence)
+
 # Going forward, if you train and do not wish to retrain this model (above) pickle the classifier
 # Load the pickle file, clf.predict will run and return list of predictions
-##    predictions = clf.predict(X_test)
-##    print('Predicted spread:', Counter(predictions))
-##
-##    print('Confidence:', Counter(confidence))   
-##    return confidence
-##
+# predictions = clf.predict(X_test)
+# print('Predicted spread:', Counter(predictions))
+#
+# print('Confidence:', Counter(confidence))   
+#    return confidence
+
 # Here we are looking at Bank of America (ticker = BAC)
-##do_ml('BAC')
-##
+# do_ml('BAC')
+
 # Example Output: 0 = hold, -1 = sell, 1 = buy (for BAC we had more holds, followed by sells and least for buys)
 # Data spread: Counter({'0': 2558, '1': 1462, '-1': 1110})
 # Data spread: Counter({'0': 2026, '1': 1701, '-1': 1403})
 # Accuracy 0.38347622759158223
 # Predicted spread: Counter({0: 758, -1: 318, 1: 207})
- 
+
+# Part 12: ML Algorithm with Voting Classifier 
 # Repeat above using Voting Classifier
 def do_ml(ticker):
     X, y, fileDataSet = extract_featuresets(ticker)
@@ -446,5 +380,4 @@ def do_ml(ticker):
 
     return confidence
 
-do_ml('TSLA')
-
+do_ml('BAC')

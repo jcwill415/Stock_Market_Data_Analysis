@@ -14,7 +14,7 @@ from pandas.testing import assert_frame_equal
 import pandas_datareader.data as web
 style.use('ggplot')
 
-df = pd.read_csv('tsla.csv', parse_dates = True, index_col = 'Date')
+df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 'Date')
 start = dt.datetime(2000,1,1)
 end = dt.datetime(2020,5,22)
 df = web.DataReader('TSLA', 'yahoo', start, end)

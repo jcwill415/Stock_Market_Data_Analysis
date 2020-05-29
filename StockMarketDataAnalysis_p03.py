@@ -8,7 +8,7 @@ import pandas.testing
 
 style.use('ggplot')
 
-df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/tsla.csv', parse_dates = True, index_col = 0)
+df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 0)
 df['100ma'] = df['Adj Close'].rolling(window = 100).mean()
 df['100ma'] = df['Adj Close'].rolling(window = 100, min_periods = 0).mean()
 print(df.tail(10))
