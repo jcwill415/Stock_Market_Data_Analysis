@@ -22,8 +22,8 @@ df = web.DataReader('TSLA', 'yahoo', start, end)
 print(df.tail(10))
 
 df = web.DataReader('TSLA', 'yahoo', start, end)
-df.to_csv('C:/Users/JCW/Desktop/tsla.csv')
-df = pd.read_csv('C:/Users/JCW/Desktop/tsla.csv', parse_dates = True, index_col = 'Date')
+df.to_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv')
+df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 'Date')
 
 df['100ma'] = df['Adj Close'].rolling(window = 100, min_periods = 0).mean()
 df.dropna(inplace = True)
