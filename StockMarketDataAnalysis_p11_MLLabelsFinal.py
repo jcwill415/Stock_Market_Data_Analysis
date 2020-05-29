@@ -144,7 +144,7 @@ def process_data_for_labels(ticker):
     fileDataSet.fillna(0, inplace = True)
     return tickers, fileDataSet
 
-# Here we look at 3M company (ticker = MMM)
+# Here we look at " " company (ticker = " ")
 process_data_for_labels('AAPL')
 
 # Next, generate labels for targets using machine learning for investing with Python
