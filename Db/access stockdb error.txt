@@ -1,5 +1,0 @@
-Unable to complete action
-This data source uses a connection that doesn't support logical tables. Add a single logical table, open it, and then add the table in the physical layer of the data source.
-
-For more information on logical and physical tables, see
-https://www.tableau.com/en-us/app/om-physical-logical?build=20202.20.0415.1946&edition=public&lang=en-us&platform=windows&version=2020.2
