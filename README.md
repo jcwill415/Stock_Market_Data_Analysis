@@ -50,16 +50,16 @@ Import needed packages/modules
 <b> NOTE:</b> If you are new to Python, check out the Python Programming Fundamentals website for tutorials at https://pythonprogramming.net/introduction-learn-python-3-tutorials/using. You will need to review up to installing Python packages and modules with pip. 
 
 ## <b>INSTRUCTIONS:</b>
-<b>Step 1:</b> Intro to Using Python for Finance
-<b>Step 2:</b> Handling and Graphing Data
-<b>Step 3:</b> Stock Data Manipulation
-<b>Step 4:</b> Data Resampling
-<b>Step 5:</b> S&P500 List Automation
-<b>Step 6:</b> Getting S&P500 Stock Price Data
-<b>Step 7:</b> Combine DataFrames for S&P500 List and Stock Price Data
+* <b>Step 1:</b> Intro to Using Python for Finance
+* <b>Step 2:</b> Handling and Graphing Data
+* <b>Step 3:</b> Stock Data Manipulation
+* <b>Step 4:</b> Data Resampling
+* <b>Step 5:</b> S&P500 List Automation
+* <b>Step 6:</b> Getting S&P500 Stock Price Data
+* <b>Step 7:</b> Combine DataFrames for S&P500 List and Stock Price Data
 ### Python for Machine Learning
-<b>Step 8:</b> Building S&P500 Correlation Table
-<b>Step 9:</b> ML: Preprocess Stock Market Data
-<b>Step 10:</b> ML: Create Target Function 
-<b>Step 11:</b> ML: Create Labels
-<b>Step 12:</b> ML Algorithm: Mapping Relationships for Stock Prices
+* <b>Step 8:</b> Building S&P500 Correlation Table
+* <b>Step 9:</b> ML: Preprocess Stock Market Data
+* <b>Step 10:</b> ML: Create Target Function 
+* <b>Step 11:</b> ML: Create Labels
+* <b>Step 12:</b> ML Algorithm: Mapping Relationships for Stock Prices
