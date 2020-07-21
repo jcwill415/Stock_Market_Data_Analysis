@@ -4,8 +4,8 @@
 #### Use the .ipynb file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
 
 ## Project Summary 
-#### First, this project will start with technical analysis, measuring stock price data for movement (volatility) and volume.
-#### Second, I plan to include a branch with fundamental analysis, to look more in depth at financial statement analysis.
+#### First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
+#### Second, I plan to expand this project in the future, to include a branch with fundamental analysis, to look more in depth at financial statement analysis.
 #### Third, I am interested in expanding the analysis to include Python for cryptocurrencies, such as financial and investment analysis for ICOs, and predicting crypto prices. 
 ##### <b>DISCLAIMER:</b> I am not a financial adviser nor a CPA. This project is for educational purposes only. Investing of any kind involves risk. Although it is possible to minimize risk, your investments are solely your responsibility. It is very important to conduct your own research. I am merely sharing my project/opinion with no guarantee of either gains or losses on any investments.
 
