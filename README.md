@@ -1,7 +1,7 @@
 # STOCK MARKET DATA ANALYSIS
-### Use Python to scrape data and join with financial data from Yahoo Finance (or another finance) API. Use data manipulation and visualization for financial and investment analysis (i.e. compare rates of return, calculate risk, build trading algorithms, and make investment decisions).  
+Use Python to scrape data and join with financial data from Yahoo Finance (or another finance) API. Use data manipulation and visualization for financial and investment analysis (i.e. compare rates of return, calculate risk, build trading algorithms, and make investment decisions).  
 
-#### Use the .ipynb file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
+* Use the .ipynb file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
@@ -16,13 +16,13 @@
 * Packages: Pandas/NumPy, Matplotlib for data manipulation and visualization.
 
 ## Features
-#### The script will scrape data for S&P500 tickers, pull financial data from API, download into csv file. 
-##### - Scrape stock tickers from web (i.e. Wikipedia) 
-##### - For this project, the SP500 list is from: "List of S&P 500 Companies" at https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
-##### - Use Requests to scrape data for Beautiful Soup to parse
-##### - Using this soup object, navigate/search HTML for data you want to pull. 
-#### Create directory with stock price close data for all 500 companies over time (i.e. 01/01/2000 to 05/24/2020). 
-#### Build quantitative models to conduct financial and investment analysis such as risk and rates of return, and build a basic trading strategy. 
+The script will scrape data for S&P500 tickers, pull financial data from API, download into csv file. 
+* Scrape stock tickers from web (i.e. Wikipedia) 
+* For this project, the SP500 list is from: "List of S&P 500 Companies" at https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+* Use Requests to scrape data for Beautiful Soup to parse
+* Using this soup object, navigate/search HTML for data you want to pull. 
+* Create directory with stock price close data for all 500 companies over time (i.e. 01/01/2000 to 05/24/2020). 
+* Build quantitative models to conduct financial and investment analysis such as risk and rates of return, and build a basic trading strategy. 
 
 ## Milestones
 #### Import needed packages
