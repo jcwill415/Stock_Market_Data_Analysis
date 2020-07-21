@@ -25,38 +25,41 @@ The script will scrape data for S&P500 tickers, pull financial data from API, do
 * Build quantitative models to conduct financial and investment analysis such as risk and rates of return, and build a basic trading strategy. 
 
 ## Milestones
-#### Import needed packages
-##### <b>Packages required for this project:</b>
-###### pandas
-###### pandas-datareader
-###### beautifulsoup4
-###### scikit-learn
-###### * Dependencies & modules you might have to install: NumPy, Matplotlib, mplfinance, yahoo (or another finance API) 
+Import needed packages/modules
+<b>Required for this project:</b>
+* pandas
+* pandas-datareader
+* beautifulsoup4
+* scikit-learn
+* NumPy
+* Matplotlib
+* mplfinance
+* yahoo (or another finance API) 
 
 ## Requirements
-#### Build webscraper to get data for S&P500 List</b>
-#### Use Yahoo Finance (or other) API for financial data
-#### Use Pandas to join stock tickers with financial data
-#### Analyze data with various quantitative models to calculate risk and make investment decisions.
-#####   - Download data as csv and read. 
-#####   - Build quantitative models to predict returns & evaluate risk. 
-#####   - Run basic Value at Risk (VaR) calculations, Monte Carlo Simulations
-#####   - Looking at news sentiment as a proxy for market volatility.
-#####   - Graph/visualize data.
+* Build webscraper to get data for S&P500 List</b>
+* Use Yahoo Finance (or other) API for financial data
+* Use Pandas to join stock tickers with financial data
+* Analyze data with various quantitative models to calculate risk and make investment decisions.
+* Download data as csv and read. 
+  * Build quantitative models to predict returns & evaluate risk. 
+  * Run basic Value at Risk (VaR) calculations, Monte Carlo Simulations
+  * Looking at news sentiment as a proxy for market volatility.
+  * Graph/visualize data.
 
-##### <b> NOTE:</b> If you are new to Python, check out the Python Programming Fundamentals website for tutorials at https://pythonprogramming.net/introduction-learn-python-3-tutorials/using. You will need to review up to installing Python packages and modules with pip. 
+<b> NOTE:</b> If you are new to Python, check out the Python Programming Fundamentals website for tutorials at https://pythonprogramming.net/introduction-learn-python-3-tutorials/using. You will need to review up to installing Python packages and modules with pip. 
 
 ## <b>INSTRUCTIONS:</b>
-#### <b>Step 1:</b> Intro to Using Python for Finance
-#### <b>Step 2:</b> Handling and Graphing Data
-#### <b>Step 3:</b> Stock Data Manipulation
-#### <b>Step 4:</b> Data Resampling
-#### <b>Step 5:</b> S&P500 List Automation
-#### <b>Step 6:</b> Getting S&P500 Stock Price Data
-#### <b>Step 7:</b> Combine DataFrames for S&P500 List and Stock Price Data
+<b>Step 1:</b> Intro to Using Python for Finance
+<b>Step 2:</b> Handling and Graphing Data
+<b>Step 3:</b> Stock Data Manipulation
+<b>Step 4:</b> Data Resampling
+<b>Step 5:</b> S&P500 List Automation
+<b>Step 6:</b> Getting S&P500 Stock Price Data
+<b>Step 7:</b> Combine DataFrames for S&P500 List and Stock Price Data
 ### Python for Machine Learning
-#### <b>Step 8:</b> Building S&P500 Correlation Table
-#### <b>Step 9:</b> ML: Preprocess Stock Market Data
-#### <b>Step 10:</b> ML: Create Target Function 
-#### <b>Step 11:</b> ML: Create Labels
-#### <b>Step 12:</b> ML Algorithm: Mapping Relationships for Stock Prices
+<b>Step 8:</b> Building S&P500 Correlation Table
+<b>Step 9:</b> ML: Preprocess Stock Market Data
+<b>Step 10:</b> ML: Create Target Function 
+<b>Step 11:</b> ML: Create Labels
+<b>Step 12:</b> ML Algorithm: Mapping Relationships for Stock Prices
