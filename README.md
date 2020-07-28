@@ -11,8 +11,8 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 ##### <b>DISCLAIMER:</b> I am not a financial adviser nor a CPA. This project is for educational purposes only. Investing of any kind involves risk. Although it is possible to minimize risk, your investments are solely your responsibility. It is very important to conduct your own research. I am merely sharing my project/opinion with no guarantee of either gains or losses on any investments.
 
 ## Technical Summary
-* Back end language: Python
-* Dataset: csv, stock price date via Yahoo Finance
+* Back end language: Python (the version used here is Python 3.7.6)
+* Dataset: csv, stock price data via Yahoo Finance
 * Packages: Pandas/NumPy; Scikit-learn for Machine Learning in Python; Matplotlib (and mplfinance) for data manipulation and visualization.
 
 ## Features
