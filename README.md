@@ -1,8 +1,6 @@
 # STOCK MARKET DATA ANALYSIS
 Use Python to scrape data and join with financial data from Yahoo Finance (or another finance) API. Use data manipulation and visualization for financial and investment analysis (i.e. compare rates of return, calculate risk, build trading algorithms, and make investment decisions).  
 
-* Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook (details below). Use the .py file to run the program only in Python.
-
 ## How to Run
 * Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
 * For users running the project with Jupyter:
