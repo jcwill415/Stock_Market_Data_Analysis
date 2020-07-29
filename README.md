@@ -1,7 +1,19 @@
 # STOCK MARKET DATA ANALYSIS
 Use Python to scrape data and join with financial data from Yahoo Finance (or another finance) API. Use data manipulation and visualization for financial and investment analysis (i.e. compare rates of return, calculate risk, build trading algorithms, and make investment decisions).  
 
+* Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook (details below). Use the .py file to run the program only in Python.
+
+## How to Run
 * Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
+* For users running the project with Jupyter:
+1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
+2) After installing Python, open a Python shell and run the following command:
+* "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
+3) You will also need to install Jupyter Notebook, so from the shell run the command:
+* "pip install jupyter"
+4) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
+5) Locate the ".ipynb" file and run Jupyter with the command "jupyter notebook"; this will take you to the project in Jupyter Notebook, opening up a browser.
+6) To view the project in Jupyter, select "Cell," and "Run All."
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
