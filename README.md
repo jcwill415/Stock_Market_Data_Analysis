@@ -6,9 +6,9 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 * For users running the project with Jupyter:
  1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
  2) After installing Python, open a Python shell and run the following command:
-  * "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
+   * "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
  3) You will also need to install Jupyter Notebook, so from the shell run the command:
-  * "pip install jupyter"
+   * "pip install jupyter"
  4) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
  5) Locate the ".ipynb" file and run Jupyter with the command "jupyter notebook"; this will take you to the project in Jupyter Notebook, opening up a browser.
  6) To view the project in Jupyter, select "Cell," and "Run All."
