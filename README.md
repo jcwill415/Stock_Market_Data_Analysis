@@ -14,9 +14,10 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 * Back end language: Python (the version used here is Python 3.7.6)
 * Dataset: csv, stock price data via Yahoo Finance
 * Packages: Pandas/NumPy; Scikit-learn for Machine Learning in Python; Matplotlib (and mplfinance) for data manipulation and visualization.
+* (For Code Louisville: 5+ commits using Git.)
 
 ## Features
-The script will scrape data for S&P500 tickers, pull financial data from Yahoo Finance API, and download into a csv file. 
+The script will scrape data for S&P500 tickers, pull financial data from Yahoo Finance API, and download into a csv file. It will also manipulate/clean data, and merge multiple data frames into one large csv file. The script uses for loops, dictionaries, and error handling. Further, there is additional data visualization in the "Stock_Market_Data_Analysis_DataVisualization.ipynb" Jupyter Notebook file; this is done using matplotlib to build various stock charts (i.e. line charts, bar charts, moving average bar charts, candlestick charts). Additional features are highlighted below:
 * Scrape stock tickers from web (i.e. Wikipedia). 
 * For this project, the SP500 list is from: "List of S&P 500 Companies" at https://en.wikipedia.org/wiki/List_of_S%26P_500_companies.
 * Use Requests to scrape data for Beautiful Soup to parse.
