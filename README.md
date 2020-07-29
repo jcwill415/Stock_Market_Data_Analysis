@@ -3,12 +3,13 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 
 ## How to Run
 * Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
-* For users running the project with Jupyter:
+  * For users running the project with Jupyter:
+
 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
 2) After installing Python, open a Python shell and run the following command:
-* "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
+   * "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
 3) You will also need to install Jupyter Notebook, so from the shell run the command:
-* "pip install jupyter"
+   * "pip install jupyter"
 4) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
 5) Locate the ".ipynb" file and run Jupyter with the command "jupyter notebook"; this will take you to the project in Jupyter Notebook, opening up a browser.
 6) To view the project in Jupyter, select "Cell," and "Run All."
@@ -24,9 +25,10 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 * Back end language: Python (the version used here is Python 3.7.6)
 * Dataset: csv, stock price data via Yahoo Finance
 * Packages: Pandas/NumPy; Scikit-learn for Machine Learning in Python; Matplotlib (and mplfinance) for data manipulation and visualization.
+* (For Code Louisville: 5+ commits using Git.)
 
 ## Features
-The script will scrape data for S&P500 tickers, pull financial data from Yahoo Finance API, and download into a csv file. 
+The script will scrape data for S&P500 tickers, pull financial data from Yahoo Finance API, and download into a csv file. It will also manipulate/clean data, and merge multiple data frames into one large csv file. The script uses for loops, dictionaries, and error handling. Further, there is additional data visualization in the "Stock_Market_Data_Analysis_DataVisualization.ipynb" Jupyter Notebook file; this is done using matplotlib to build various stock charts (i.e. line charts, bar charts, moving average bar charts, candlestick charts). Additional features are highlighted below:
 * Scrape stock tickers from web (i.e. Wikipedia). 
 * For this project, the SP500 list is from: "List of S&P 500 Companies" at https://en.wikipedia.org/wiki/List_of_S%26P_500_companies.
 * Use Requests to scrape data for Beautiful Soup to parse.
