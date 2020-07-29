@@ -4,7 +4,7 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 ## How to Run
 * Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
 * For users running the project with Jupyter:
- 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
+<p> 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.</p>
  2) After installing Python, open a Python shell and run the following command:
    * "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
  3) You will also need to install Jupyter Notebook, so from the shell run the command:
