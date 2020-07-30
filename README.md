@@ -37,13 +37,13 @@ The script will scrape data for S&P500 tickers, pull financial data from Yahoo F
 * Build quantitative models to conduct financial and investment analysis such as risk and rates of return, and build a basic trading strategy. 
 
 ## Milestones
-Import needed packages/modules
+Import needed packages/modules</br>
 <b>Required for this project:</b>
 * pandas
 * pandas-datareader
 * beautifulsoup4
 * scikit-learn
-* numPy
+* numpy
 * matplotlib
 * mplfinance
 * yfinance (or another finance API) 
