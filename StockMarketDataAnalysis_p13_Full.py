@@ -20,7 +20,8 @@ import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
 from matplotlib import style
 
-import mplfinance.plot
+import mplfinance
+import mpl_finance
 
 import collections
 from collections import Counter
@@ -72,8 +73,8 @@ print(df_ohlc.head())
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
 ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
 
-mplfinance.plot(ax1, df_ohlc.values, width = 2, colorup = 'g')
-ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
+#mplfinance.plot(ax1, df_ohlc.values, width = 2, colorup = 'g')
+#ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
 # plt.show()
 
 
