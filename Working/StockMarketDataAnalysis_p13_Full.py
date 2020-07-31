@@ -21,7 +21,7 @@ import matplotlib.dates as mdates
 from matplotlib import style
 
 import mplfinance
-from mpl_finance import candlestick_ohlc
+import mpl_finance
 
 import collections
 from collections import Counter
@@ -35,7 +35,7 @@ from sklearn.ensemble import VotingClassifier, RandomForestClassifier
 style.use('ggplot')
 
 # Parts 1-3: Using Stock Market Data
-df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 'Date')
+df = pd.read_csv('stock_dfs/tsla.csv', parse_dates = True, index_col = 'Date')
 start = dt.datetime(2000,1,1)
 end = dt.datetime(2020,5,22)
 df = web.DataReader('TSLA', 'yahoo', start, end)
@@ -43,12 +43,14 @@ df = web.DataReader('TSLA', 'yahoo', start, end)
 print(df.tail(10))
 
 df = web.DataReader('TSLA', 'yahoo', start, end)
-df.to_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv')
-df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 'Date')
+df.to_csv('stock_dfs/tsla.csv')
+df = pd.read_csv('stock_dfs/tsla.csv', parse_dates = True, index_col = 'Date')
 
 df['100ma'] = df['Adj Close'].rolling(window = 100, min_periods = 0).mean()
 df.dropna(inplace = True)
 print(df.tail())
+
+
 
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
 ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
@@ -56,7 +58,7 @@ ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
 ax1.plot(df.index, df['Adj Close'])
 ax1.plot(df.index, df['100ma'])
 ax2.bar(df.index, df['Volume'])
-# plt.show()
+plt.show()
 
 df_ohlc = df['Adj Close'].resample('10D').ohlc()
 df_volume = df['Volume'].resample('10D').sum()
@@ -71,12 +73,13 @@ print(df_ohlc.head())
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
 ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
 
-candlestick_ohlc(ax1, df_ohlc.values, width = 2, colorup = 'g')
-ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
+#mplfinance.plot(ax1, df_ohlc.values, width = 2, colorup = 'g')
+#ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
 # plt.show()
 
+
 # Part 4: Resampling
-df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/tsla.csv', parse_dates = True, index_col = 0)
+df = pd.read_csv('C:/Users/JCW/Desktop/Stock_Market_Data_Analysis/CompanyData/stock_dfs/tsla.csv', parse_dates = True, index_col = 0)
 df['100ma'] = df['Adj Close'].rolling(window = 100, min_periods = 0).mean()
 print(df.tail(10))
 
@@ -95,7 +98,7 @@ ax1 = plt.subplot2grid((6,1), (0,0), rowspan = 5, colspan = 1)
 ax2 = plt.subplot2grid((6,1), (5,0), rowspan = 1, colspan = 1, sharex = ax1)
 ax1.xaxis_date()
 
-candlestick_ohlc(ax1, df_ohlc.values, width = 3, colorup = 'g')
+mplfinance.plot(ax1, df_ohlc.values, width = 3, colorup = 'g')
 ax2.fill_between(df_volume.index.map(mdates.date2num), df_volume.values, 0)
                  
 ax1.plot(df.index, df['Adj Close'])

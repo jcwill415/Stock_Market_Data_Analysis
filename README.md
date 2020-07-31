@@ -9,13 +9,21 @@ https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4
   * For users running the project with Jupyter:
 
 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
-2) After installing Python, open a Python shell and run the following command:
-   * "pip install pandas, pandas-datareader, beautifulsoup4, scikit-learn, numpy, matplotlib, mplfinance, yfinance"
-3) You will also need to install Jupyter Notebook, so from the shell run the command:
-   * "pip install jupyter"
-4) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
-5) Locate the ".ipynb" file and run Jupyter with the command "jupyter notebook"; this will take you to the project in Jupyter Notebook, opening up a browser.
-6) To view the project in Jupyter, select "Cell," and "Run All."
+2) After installing Python, open a Python shell and run the following commands to install the necessary packages to run my program:
+   * pip install pandas
+   * pip install pandas-datareader
+   * pip install beautifulsoup4 
+   * pip install scikit-learn 
+   * pip install numpy 
+   * pip install matplotlib 
+   * pip install mplfinance 
+   * pip install mpl-finance
+   * pip install yfinance
+   * pip install jupyter
+3) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
+4) Locate the ".ipynb" file ("Stock_Market_Data_Analysis.ipynb") and run Jupyter with the command "jupyter notebook" in your terminal or cmd; this will take you to the project in Jupyter Notebook, opening up a browser.
+5) Once Jupyter opens in the browser, you should see the "Stock_Market_Data_Analysis.ipynb" notebook file. Double click to open the file.
+6) To run the program, select "Cell," and "Run All."
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
@@ -80,7 +88,6 @@ Import needed packages/modules</br>
 * <b>Step 12:</b> ML Algorithm: Mapping Relationships for Stock Prices
 
 ## <b> RESOURCES:</b>
-RESOURCES:
 
 365 Careers (2020). Python for Finance: Investment Fundamentals & Data Analytics
 https://www.udemy.com/course/python-for-finance-investment-fundamentals-data-analytics/
