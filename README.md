@@ -2,7 +2,7 @@
 Use Python to scrape data and join with financial data from Yahoo Finance (or another finance) API. Use data manipulation and visualization for financial and investment analysis (i.e. compare rates of return, calculate risk, build trading algorithms, and make investment decisions).  
 
 ## How to Run
-* Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file to run the program only in Python.
+* Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file ("Stock_Market_DataAnalysis_DataVisualization.py") to run the program only in Python.
 * For a walk through of the project - how to install Python, the necessary packages, Jupyter, and run the notebook file - please see this screen recording:
 https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4f00-ab63-2e53ed84b5d3/
 
@@ -24,7 +24,7 @@ https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4
 4) Locate the ".ipynb" file ("Stock_Market_Data_Analysis.ipynb") and run Jupyter with the command "jupyter notebook" in your terminal or cmd; this will take you to the project in Jupyter Notebook, opening up a browser.
 5) Once Jupyter opens in the browser, you should see the "Stock_Market_Data_Analysis.ipynb" notebook file. Double click to open the file.
 6) To run the program, select "Cell," and "Run All."
-7) For additional charts, please run the "Stock_Market_Data_Analysis_DataVisualizations.ipynb" file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
+7) For additional charts, please run the "StockMarketDataAnalysis_DataVisualization.ipynb" file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
