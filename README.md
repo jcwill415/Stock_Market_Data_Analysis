@@ -24,6 +24,7 @@ https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4
 4) Locate the ".ipynb" file ("Stock_Market_Data_Analysis.ipynb") and run Jupyter with the command "jupyter notebook" in your terminal or cmd; this will take you to the project in Jupyter Notebook, opening up a browser.
 5) Once Jupyter opens in the browser, you should see the "Stock_Market_Data_Analysis.ipynb" notebook file. Double click to open the file.
 6) To run the program, select "Cell," and "Run All."
+7) For additional charts, please run the "Stock_Market_Data_Analysis_DataVisualizations.ipynb" file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
