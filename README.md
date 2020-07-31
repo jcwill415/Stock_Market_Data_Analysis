@@ -48,19 +48,24 @@ The script will scrape data for S&P500 tickers, pull financial data from Yahoo F
 * Build quantitative models to conduct financial and investment analysis such as risk and rates of return, and build a basic trading strategy. 
 
 ## Milestones
-Import needed packages/modules</br>
+* Import needed packages/modules
 <b>Required for this project:</b>
-* pandas
-* pandas-datareader
-* beautifulsoup4
-* scikit-learn
-* numpy
-* matplotlib
-* mplfinance
-* yfinance (or another finance API) 
-
+   * pandas
+   * pandas-datareader
+   * beautifulsoup4
+   * scikit-learn
+   * numpy
+   * matplotlib
+   * mplfinance, mpl_finance
+   * yfinance (or another finance API)
+   * jupyter 
+* Scrape data using BeautifulSoup
+* Download financial data from API
+* Join tickers with stock price data
+* Visualize data using Matplotlib
+* Create basic trading strategy
 ## Requirements
-* Build webscraper to get data for S&P500 List</b>
+* Build webscraper to get data for S&P500 List.
 * Use Yahoo Finance (or other) API for financial data.
 * Use Pandas to join stock tickers with financial data.
 * Analyze data with various quantitative models to calculate risk and make investment decisions.
