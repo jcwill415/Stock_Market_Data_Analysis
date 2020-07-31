@@ -164,7 +164,7 @@ Quandl (2020). Get Financial Data Directly into Python.
 https://www.quandl.com/tools/python
 
 Vaidyanathan, V. (2020). Coursera: Investment Management with Python and Machine Learning Specialization
-https://www.coursera.org/specializations/investment-management-python-machine-learning?utm_source=gg&utm_medium=sem&utm_content=01-CatalogDSA-Fin1-US&campaignid=9918777773&adgroupid=101741958718&device=c&keyword=&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=433034295768&hide_mobile_promo&gclid=CjwKCAjw34n5BRA9EiwA2u9k3wMFe9XhXvmcdtRRu0_0jptT16ZSI0AUGJzWNHiPYfXN7StyPTS_mBoCRWcQAvD_BwE
+https://www.coursera.org/specializations/investment-management-python-machine-learning
 
 Vaidyanathan, V. (2020b). Coursera: Course 1 - Introduction to Portfolio Construction and Analysis with Python
 https://www.coursera.org/learn/introduction-portfolio-construction-python
