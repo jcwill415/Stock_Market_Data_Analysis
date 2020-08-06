@@ -10,16 +10,16 @@ https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4
 
 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
 2) After installing Python, open a Python shell and run the following commands to install the necessary packages to run my program:
-## &nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas`
-   * pip install pandas-datareader
-   * pip install beautifulsoup4 
-   * pip install scikit-learn 
-   * pip install numpy 
-   * pip install matplotlib 
-   * pip install mplfinance 
-   * pip install mpl-finance
-   * pip install yfinance
-   * pip install jupyter
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas-datareader`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install beautifulsoup4`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install scikit-learn`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install numpy`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install matplotlib`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install mplfinance`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install mpl-finance`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install yfinance`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install jupyter`
 3) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
 4) Locate the ".ipynb" file ("Stock_Market_Data_Analysis.ipynb") and run Jupyter with the command "jupyter notebook" in your terminal or cmd; this will take you to the project in Jupyter Notebook, opening up a browser.
 5) Once Jupyter opens in the browser, you should see the "Stock_Market_Data_Analysis.ipynb" notebook file. Double click to open the file.
