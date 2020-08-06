@@ -10,7 +10,7 @@ https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4
 
 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
 2) After installing Python, open a Python shell and run the following commands to install the necessary packages to run my program:
-&nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas`
+&nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas\n`
 &nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas-datareader`
 &nbsp;&nbsp;&nbsp;&nbsp;`pip install beautifulsoup4`
 &nbsp;&nbsp;&nbsp;&nbsp;`pip install scikit-learn`
