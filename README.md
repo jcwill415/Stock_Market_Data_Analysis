@@ -99,21 +99,19 @@ Some of the updates include automatic features for the user, and improved intera
 * Note: This repository is using both modules (the old and new matplotlib/mplfinance APIs), because I am working to update the candlestick charts in the script.
 * For more information on the old API, please see below.
 
-The conventional way to import the new API is as follows:
+According to the **[matplotlib/mplfinance repo](https://github.com/matplotlib/mplfinance)**, the conventional way to import the new API is as follows:
 
     import mplfinance as mpf
 The most common usage is then to call
 
     mpf.plot(data)
-where data is a Pandas DataFrame object containing Open, High, Low and Close data, with a Pandas DatetimeIndex.
+where data is the Pandas DataFrame object, which contains Open, High, Low and Close pricing data, using a Pandas DatetimeIndex.
 
-Details on how to call the new API can be found below under Basic Usage, as well as in the jupyter notebooks in the examples folder.
+Further details on how to call the new API can be found below under Basic Usage on this repo, as well as in the jupyter notebooks in the examples folder.
 
-I am very interested to hear from you regarding what you think of the new mplfinance, plus any suggestions you may have for improvement. You can reach me at dgoldfarb.github@gmail.com or, if you prefer, provide feedback or a ask question on our issues page.
 ## <b> RESOURCES:</b>
 
-365 Careers (2020). Python for Finance: Investment Fundamentals & Data Analytics
-https://www.udemy.com/course/python-for-finance-investment-fundamentals-data-analytics/
+365 Careers (2020). **[Python for Finance: Investment Fundamentals & Data Analytics](https://www.udemy.com/course/python-for-finance-investment-fundamentals-data-analytics/)**
 
 B., V. (2019). Stock Market Data and Analysis in Python
 https://www.datacamp.com/community/news/stock-market-data-and-analysis-in-python-4hzkx0wemva
