@@ -24,7 +24,7 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 
 5) Once Jupyter opens in the browser, you should see the `Stock_Market_Data_Analysis.ipynb` notebook file. Double click to open the file.
 6) To run the program, select "Cell," and "Run All."
-### 7) For additional charts, please run the `StockMarketDataAnalysis_DataVisualization.ipynb` file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
+##### 7) For additional charts, please run the `StockMarketDataAnalysis_DataVisualization.ipynb` file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
