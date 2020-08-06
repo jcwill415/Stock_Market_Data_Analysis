@@ -10,7 +10,7 @@ https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4
 
 1) After downloading the files, if Python is not installed, please install Python from https://www.python.org.
 2) After installing Python, open a Python shell and run the following commands to install the necessary packages to run my program:
-   * pip install pandas
+## &nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas`
    * pip install pandas-datareader
    * pip install beautifulsoup4 
    * pip install scikit-learn 
@@ -93,6 +93,23 @@ The script will scrape data for S&P500 tickers, pull financial data from Yahoo F
 * <b>Step 11:</b> ML: Create Labels
 * <b>Step 12:</b> ML Algorithm: Mapping Relationships for Stock Prices
 
+## The New API (mplfinance)
+There is a new matplotlib finance (mplfinance) API that has made creating financial plots easier.
+Some of the updates include automatic features for the user, and improved interacing with Pandas DataFrames.
+* Note: This repository is using both modules (the old and new matplotlib/mplfinance APIs), because I am working to update the candlestick charts in the script.
+* For more information on the old API, please see below.
+
+The conventional way to import the new API is as follows:
+
+    import mplfinance as mpf
+The most common usage is then to call
+
+    mpf.plot(data)
+where data is a Pandas DataFrame object containing Open, High, Low and Close data, with a Pandas DatetimeIndex.
+
+Details on how to call the new API can be found below under Basic Usage, as well as in the jupyter notebooks in the examples folder.
+
+I am very interested to hear from you regarding what you think of the new mplfinance, plus any suggestions you may have for improvement. You can reach me at dgoldfarb.github@gmail.com or, if you prefer, provide feedback or a ask question on our issues page.
 ## <b> RESOURCES:</b>
 
 365 Careers (2020). Python for Finance: Investment Fundamentals & Data Analytics
