@@ -2,25 +2,14 @@
 Use Python to scrape data and join with financial data from Yahoo Finance (or another finance) API. Use data manipulation and visualization for financial and investment analysis (i.e. compare rates of return, calculate risk, build trading algorithms, and make investment decisions).  
 
 ## How to Run
-* Use the "Stock_Market_Data_Analysis.ipynb" file to run the program in Jupyter Notebook. Use the .py file ("Stock_Market_DataAnalysis_DataVisualization.py") to run the program only in Python.
+* Use the `Stock_Market_Data_Analysis.ipynb` file to run the program in Jupyter Notebook. Use the ".py" file (`Stock_Market_DataAnalysis_DataVisualization.py`) to run the program only in Python.
 * For a walk through of the project - how to install Python, the necessary packages, Jupyter, and run the notebook file - please see my **[Demo Screen Recording here](https://www.screencast.com/users/jcwill415/folders/Default/media/678a3aad-e829-4f00-ab63-2e53ed84b5d3/)**.
 
   * For users running the project with Jupyter:
 
 1) After downloading the files, if Python is not installed, please install it by **[downloading Python here](https://www.python.org)**.
 2) After installing Python, open a Python shell and run the following commands to install the necessary packages to run my program:
-```python
-	pip install pandas
-	pip install pandas-datareader
-	pip install beautifulsoup4
-	pip install scikit-learn
-	pip install numpy
-	pip install matplotlib
-	pip install mplfinance
-	pip install mpl-finance
-	pip install yfinance
-	pip install jupyter
-```
+* &nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas`
 * &nbsp;&nbsp;&nbsp;&nbsp;`pip install pandas-datareader`
 * &nbsp;&nbsp;&nbsp;&nbsp;`pip install beautifulsoup4`
 * &nbsp;&nbsp;&nbsp;&nbsp;`pip install scikit-learn`
@@ -31,11 +20,11 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 * &nbsp;&nbsp;&nbsp;&nbsp;`pip install yfinance`
 * &nbsp;&nbsp;&nbsp;&nbsp;`pip install jupyter`
 3) Once everything is installed, change directory (cd) to navigate to where the project has been downloaded. 
-4) Locate the ".ipynb" file `Stock_Market_Data_Analysis.ipynb` and run Jupyter with the command:
-* &nbsp;&nbsp;&nbsp;&nbsp;`jupyter notebook` in your terminal or cmd; this will take you to the project in Jupyter Notebook, opening up a browser.
+4) Locate the ".ipynb" file `Stock_Market_Data_Analysis.ipynb` and run Jupyter with the command: `jupyter notebook` in your terminal or cmd; this will take you to the project in Jupyter Notebook, opening up a browser.
+
 5) Once Jupyter opens in the browser, you should see the `Stock_Market_Data_Analysis.ipynb` notebook file. Double click to open the file.
 6) To run the program, select "Cell," and "Run All."
-7) For additional charts, please run the `StockMarketDataAnalysis_DataVisualization.ipynb` file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
+### 7) For additional charts, please run the `StockMarketDataAnalysis_DataVisualization.ipynb` file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
@@ -61,7 +50,7 @@ The script will scrape data for S&P500 tickers, pull financial data from Yahoo F
 
 ## Milestones
 * Import needed packages/modules
-<b>Required for this project:</b>
+<b>Main Requirements for this Program:</b>
    * `pandas`
    * `pandas-datareader`
    * `beautifulsoup4`
@@ -72,20 +61,54 @@ The script will scrape data for S&P500 tickers, pull financial data from Yahoo F
    * `matplotlib`
    * `mplfinance`, `mpl_finance`
 - mplfinance requires [matplotlib](https://pypi.org/project/matplotlib/) and [pandas](https://pypi.org/project/pandas/)
-- Installation:
-```python
-	pip install --upgrade mplfinance
-```
+- Installation: `pip install --upgrade mplfinance`
 
-* Scrape data using BeautifulSoup
+* You will see the first cell in the Jupyter notebook file will import all the necessary packages to run the program:
+```python
+import requests
+import datetime as dt
+import os
+import io
+import pandas as pd
+import pandas_datareader.data as web
+import pandas.plotting
+from pandas.plotting import register_matplotlib_converters
+import pandas.testing #pandas.testing.assert_frame_equal
+from pandas.testing import assert_frame_equal #assert_frame_equal
+
+import numpy as np
+
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
+import matplotlib.dates as mdates
+import matplotlib.colors as mcolors
+from matplotlib import style
+
+import mplfinance as mpf
+import mpl_finance as mplf
+from mpl_finance import candlestick_ohlc
+
+import collections
+from collections import Counter
+
+import sklearn
+from sklearn import svm, neighbors
+from sklearn.svm import LinearSVC 
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import VotingClassifier, RandomForestClassifier
+
+style.use('ggplot')
+```
+* Scrape data using `BeautifulSoup`
 * Download financial data from API
 * Join tickers with stock price data
-* Visualize data using Matplotlib
+* Visualize data using `Matplotlib`
 * Create basic trading strategy
 ## Requirements
 * Build webscraper to get data for S&P500 List.
-* Use Yahoo Finance (or other) API for financial data.
-* Use Pandas to join stock tickers with financial data.
+* Use Yahoo Finance (or other) API `yfinance` for financial data.
+* Use `Pandas` to join stock tickers with financial data.
 * Analyze data with various quantitative models to calculate risk and make investment decisions.
 * Download data as csv and read. 
   * Build quantitative models to predict returns & evaluate risk. 
@@ -117,14 +140,16 @@ Some of the updates include automatic features for the user, and improved intera
 * For more information on the old API, please see below.
 
 According to the **[matplotlib/mplfinance repo](https://github.com/matplotlib/mplfinance)**, the conventional way to import the new API is as follows:
-
+```python
     import mplfinance as mpf
+```
 The most common usage is then to call
-
+```python
     mpf.plot(data)
-where data is the Pandas DataFrame object, which contains Open, High, Low and Close pricing data, using a Pandas DatetimeIndex.
+```
+where `data` is the `Pandas DataFrame` object, which contains Open, High, Low and Close pricing data, using a Pandas `DatetimeIndex`.
 
-Further details on how to call the new API can be found below under Basic Usage on this repo, as well as in the jupyter notebooks in the examples folder.
+Further details on how to call the new API can be found below under Basic Usage on the [matplotlib/mplfinance](https://github.com/matplotlib/mplfinance) repo, as well as in the jupyter notebooks in the examples folder.
 
 ## <b> RESOURCES:</b>
 
