@@ -24,7 +24,7 @@ Use Python to scrape data and join with financial data from Yahoo Finance (or an
 
 5) Once Jupyter opens in the browser, you should see the `Stock_Market_Data_Analysis.ipynb` notebook file. Double click to open the file.
 6) To run the program, select "Cell," and "Run All."
-*7) For additional charts, please run the `StockMarketDataAnalysis_DataVisualization.ipynb` file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
+7) For additional charts, please run the `StockMarketDataAnalysis_DataVisualization.ipynb` file in Jupyter Notebook. Here I focus mainly on data visualizations for large cap tech stocks (i.e. Apple, Google, Facebook).
 
 ## Project Summary 
 * First, this project will focus on technical analysis, measuring stock price data for movement (volatility) and volume.
@@ -118,7 +118,7 @@ style.use('ggplot')
 
 <b> NOTE:</b> If you are new to Python, check out the **[Python Programming Fundamentals website](https://pythonprogramming.net/introduction-learn-python-3-tutorials/using)** for tutorials. You will need to review up to installing Python packages and modules with pip. 
 
-## <b>INSTRUCTIONS:</b>
+## <b>Instructions (Overview):</b>
 * <b>Step 1:</b> Intro to Using Python for Finance
 * <b>Step 2:</b> Handling and Graphing Data
 * <b>Step 3:</b> Stock Data Manipulation
@@ -151,7 +151,7 @@ where `data` is the `Pandas DataFrame` object, which contains Open, High, Low an
 
 Further details on how to call the new API can be found below under Basic Usage on the [matplotlib/mplfinance](https://github.com/matplotlib/mplfinance) repo, as well as in the jupyter notebooks in the examples folder.
 
-## <b> RESOURCES:</b>
+## <b> Resources / Tutorials:</b>
 
 365 Careers (2020). **[Python for Finance: Investment Fundamentals & Data Analytics](https://www.udemy.com/course/python-for-finance-investment-fundamentals-data-analytics/)**
 
